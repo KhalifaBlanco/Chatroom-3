@@ -15,7 +15,7 @@ if(isset($_POST['update'])){
     $targetDir = "userImages/";
     $fileName = basename($_FILES["photo"]["name"]);
     date_default_timezone_set('Asia/Manila');
-    $uniqueFileName = time() . '_' . $fileName;
+    $uniqueFileName = time() . '_s' . $fileName;
     $targetFilePath = $targetDir . $uniqueFileName;
     $fileType = pathinfo($targetFilePath, PATHINFO_EXTENSION);
     if (!empty($_FILES["photo"]["name"])) {
